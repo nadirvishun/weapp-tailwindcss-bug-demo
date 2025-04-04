@@ -3,19 +3,20 @@
     <wd-button type="success">成功按钮</wd-button>
     <wd-button type="info">信息按钮</wd-button>
 
-    <wd-cell-group custom-class="mt-10" border>
-      <wd-cell title="标题文字" value="内容" />
-      <wd-cell title="标题文字" label="描述信息" value="内容" />
-    </wd-cell-group>
+    <wd-cell title="手机号" :arrow="false" required>
+      <button class="open-button" size="mini" open-type="getPhoneNumber">
+         未设置
+        <wd-icon name="arrow-right" color="#909399" class="ml-2"></wd-icon>
+      </button>
+    </wd-cell>
 
     <wd-cell-group custom-class="mt-10" border>
-      <wd-cell icon="setting1" title="称重设置" clickable is-link></wd-cell>
-      <wd-cell icon="money-circle" title="会员记录" clickable is-link></wd-cell>
-      <wd-cell icon="help-circle" title="使用帮助" clickable is-link></wd-cell>
+      <wd-cell title="标题文字" value="内容"/>
+      <wd-cell title="标题文字" label="描述信息" value="内容"/>
     </wd-cell-group>
 
-    <wd-card title="经营分析" custom-class="mt-10!" >
-      一般的，检举内容由承办的党的委员会或纪律检查委员会将处理意见或复议、复查结论同申诉人见面，听取其意见。复议、复查的结论和决定，应交给申诉人一份。
+    <wd-card title="经营分析" custom-class="!mt-10" border>
+      一般的，经营分析经营分析经营分析经营分析经营分析经营分析经营分析经营分析经营分析经营分析经营分析经营分析。
       <template #footer>
         <wd-button size="small" plain>查看详情</wd-button>
       </template>
@@ -24,10 +25,21 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-const title = ref('Hello')
 </script>
 
-<style>
+<style scoped lang="scss">
 
+//1、当存在复合选择器或是伪类时，会导致其它的css失效
+//2、而且热加载无效，不惜关闭后重新运行`npm run dev:mp-weixin`
+//3、甚至下方即便注释也会影响，只有删除下方代码才正常
+//复合选择器
+/*button.open-button {
+  background: #fff;
+  padding: 0;
+  color: #57595c;
+}*/
+//伪类
+/*.open-button::after {
+  border: none;
+}*/
 </style>
