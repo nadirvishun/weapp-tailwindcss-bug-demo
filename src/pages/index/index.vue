@@ -33,13 +33,13 @@
 //2、而且热加载无效，要想查看效果必须重新运行`npm run dev:mp-weixin`
 //3、甚至下方即便注释也会影响，只有删除下方代码才正常或不用复合选择器、伪类时正常
 //复合选择器
-/*button.open-button {
+button.open-button {
   background: #fff;
   padding: 0;
   color: #57595c;
-}*/
+}
 //伪类
-/*.open-button::after {
+.open-button::after {
   border: none;
-}*/
+}
 </style>
